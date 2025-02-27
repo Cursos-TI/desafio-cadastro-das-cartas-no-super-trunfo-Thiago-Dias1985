@@ -9,8 +9,12 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
+    float densidade_populacional1,densidade_populacional2; // variaveis,densidade_populacional1 e 2 e 
+    float pib_percapta1,pib_percapta2;             //pib_percapta1 e 2 inseridas para o desafio:nivel aventureiro.
+
 
     // Entrada da primeira carta
+
     printf("\n***SUPER TRUNFO CARTA -1*** ");
     printf("\nInforme os dados da primeira carta:\n");
 
@@ -36,6 +40,9 @@ int main() {
 
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
+    densidade_populacional1 = populacao1/area1;//calculo da densidade populacional1
+    pib_percapta1 = pib1/populacao1;// calculo do pib por capita1
+
 
     // Entrada da segunda carta
     printf("\n***SUPER TRUNFO CARTA -2*** ");
@@ -63,9 +70,14 @@ int main() {
 
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
+    densidade_populacional2 = populacao2/area2;//calculo da densidade populacional2
+    pib_percapta2 = pib2/populacao2;// calculo do pib por capita2
 
+    
     // Exibir os dados cadastrados
     printf("\n---**CARTAS CADASTRADAS** ---\n");
+
+
     // CARTA -1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
@@ -75,6 +87,10 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+    printf("PIB per Capita: %.2f reais\n", pib_percapta1);
+
+
     // CARTA -2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -84,6 +100,9 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+    printf("PIB per Capita: %.2f reais\n", pib_percapta2);
+
 
     return 0;
 }
